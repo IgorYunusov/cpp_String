@@ -1,0 +1,692 @@
+\hypertarget{classString}{\section{String Class Reference}
+\label{classString}\index{String@{String}}
+}
+
+
+A custom \hyperlink{classString}{String} implementation.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classString_a8a7ef356e05eb9b1ea1ab518baee3095}{String} ()
+\begin{DoxyCompactList}\small\item\em Empty \hyperlink{classString}{String} Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classString_a1fdfe981d2c5e0075c1669dd94553082}{String} (char c)
+\begin{DoxyCompactList}\small\item\em Single-\/character \hyperlink{classString}{String} Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classString_abd440c0a85756c6d4d24b64726933077}{String} (const char $\ast$c)
+\begin{DoxyCompactList}\small\item\em char$\ast$ \hyperlink{classString}{String} Constructor \end{DoxyCompactList}\item 
+\hyperlink{classString_a50ec7bf093552bdd2f467225c185490a}{String} (const \hyperlink{classString}{String} \&s)
+\begin{DoxyCompactList}\small\item\em Copy \hyperlink{classString}{String} Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classString_ac40b2a3fb58c2d8556f5e6ff73510036}{$\sim$\-String} ()
+\begin{DoxyCompactList}\small\item\em Default \hyperlink{classString}{String} Destructor. \end{DoxyCompactList}\item 
+unsigned \hyperlink{classString_add33ec877ceeb9c9ba9e39e8dbd92890}{len} () const 
+\begin{DoxyCompactList}\small\item\em \hyperlink{classString}{String} length. \end{DoxyCompactList}\item 
+int \hyperlink{classString_a35732025053a03087572d7b4887ce272}{index} (char c) const 
+\begin{DoxyCompactList}\small\item\em \hyperlink{classString}{String} index of {\itshape c}. \end{DoxyCompactList}\item 
+void \hyperlink{classString_a660ef1c6f164578528c6fe523bb24ddd}{upcase} (unsigned first, unsigned last)
+\begin{DoxyCompactList}\small\item\em Converts lowercase alphabetic characters to uppercase. \end{DoxyCompactList}\item 
+void \hyperlink{classString_aeb4f3ac2a19f4bb5de51991ed1ed047b}{downcase} (unsigned first, unsigned last)
+\begin{DoxyCompactList}\small\item\em Converts uppercase alphabetic characters to lowercase. \end{DoxyCompactList}\item 
+void \hyperlink{classString_a09a20daa7ccb207e01d191458fbc24fb}{togglecase} (unsigned first, unsigned last)
+\begin{DoxyCompactList}\small\item\em Toggles lowercase alphabetic characters to uppercase, and vice versa. \end{DoxyCompactList}\item 
+\hyperlink{classString}{String} \& \hyperlink{classString_a81fc5f68bb5acf8d3c83b9be872002f2}{operator=} (const \hyperlink{classString}{String} \&s)
+\begin{DoxyCompactList}\small\item\em Sets \hyperlink{classString}{String} value. \end{DoxyCompactList}\item 
+\hyperlink{classString}{String} \& \hyperlink{classString_a48ffaa3062eb9258440f5cb04eb447b4}{operator+=} (const \hyperlink{classString}{String} \&s)
+\begin{DoxyCompactList}\small\item\em Append to \hyperlink{classString}{String}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+{\bf }\par
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{classString_a3131a12468bb0c6b95bef877ddf16bf0}{operator\mbox{[}$\,$\mbox{]}} (unsigned j) const 
+\begin{DoxyCompactList}\small\item\em Access \hyperlink{classString}{String} character. \end{DoxyCompactList}\item 
+\hypertarget{classString_adb6033a5757a2a2dd0a6f32f22298ce7}{char \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (unsigned j)}\label{classString_adb6033a5757a2a2dd0a6f32f22298ce7}
+
+\end{DoxyCompactItemize}
+
+\subsection*{Friends}
+{\bf }\par
+\begin{DoxyCompactItemize}
+\item 
+std\-::ostream \& \hyperlink{classString_aca402c6a0b7cce1f431a4f117a7b4e36}{operator$<$$<$} (std\-::ostream \&so, const \hyperlink{classString}{String} \&s)
+\begin{DoxyCompactList}\small\item\em Stream operators. \end{DoxyCompactList}\item 
+\hypertarget{classString_a148e8d19c94cda42dd2011a65e4efd04}{std\-::istream \& {\bfseries operator$>$$>$} (std\-::istream \&so, \hyperlink{classString}{String} \&s)}\label{classString_a148e8d19c94cda42dd2011a65e4efd04}
+
+\end{DoxyCompactItemize}
+
+{\bf }\par
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classString}{String} \hyperlink{classString_a346acdf3143412eaab63e8f3664cd575}{operator+} (const \hyperlink{classString}{String} \&lhs, const \hyperlink{classString}{String} \&rhs)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classString}{String} concatenation (addition). \end{DoxyCompactList}\item 
+\hypertarget{classString_a04dd51e6a07a2429189f2e95ed1d20fb}{\hyperlink{classString}{String} {\bfseries operator+} (const \hyperlink{classString}{String} \&lhs, char rhs)}\label{classString_a04dd51e6a07a2429189f2e95ed1d20fb}
+
+\item 
+\hypertarget{classString_a90015386d12dcad1a1150e0e3c6a0d8a}{\hyperlink{classString}{String} {\bfseries operator+} (const \hyperlink{classString}{String} \&lhs, const char $\ast$rhs)}\label{classString_a90015386d12dcad1a1150e0e3c6a0d8a}
+
+\item 
+\hypertarget{classString_a640d0ff4cab0efefd751943a8b83aa03}{\hyperlink{classString}{String} {\bfseries operator+} (char lhs, const \hyperlink{classString}{String} \&rhs)}\label{classString_a640d0ff4cab0efefd751943a8b83aa03}
+
+\item 
+\hypertarget{classString_ae3cd285a0b3bcf7d5f1b89dba89035d1}{\hyperlink{classString}{String} {\bfseries operator+} (const char $\ast$lhs, const \hyperlink{classString}{String} \&rhs)}\label{classString_ae3cd285a0b3bcf7d5f1b89dba89035d1}
+
+\end{DoxyCompactItemize}
+
+{\bf }\par
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classString_a57204d6cb68b449d9db9eae4883571c1}{operator==} (const \hyperlink{classString}{String} \&lhs, const \hyperlink{classString}{String} \&rhs)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classString}{String} equality. \end{DoxyCompactList}\item 
+\hypertarget{classString_a6f9d141bc5ef2571a65edbafa57f5708}{bool {\bfseries operator==} (const \hyperlink{classString}{String} \&lhs, char rhs)}\label{classString_a6f9d141bc5ef2571a65edbafa57f5708}
+
+\item 
+\hypertarget{classString_a4cf760d9d1b68bcf1cd43e9f5c54feb1}{bool {\bfseries operator==} (const \hyperlink{classString}{String} \&lhs, const char $\ast$rhs)}\label{classString_a4cf760d9d1b68bcf1cd43e9f5c54feb1}
+
+\item 
+\hypertarget{classString_a8db8b666adbd8720eabaa9da7de0d7e7}{bool {\bfseries operator==} (char lhs, const \hyperlink{classString}{String} \&rhs)}\label{classString_a8db8b666adbd8720eabaa9da7de0d7e7}
+
+\item 
+\hypertarget{classString_a0ccb8b7286ed4a45f31b6c936a9a98c2}{bool {\bfseries operator==} (const char $\ast$lhs, const \hyperlink{classString}{String} \&rhs)}\label{classString_a0ccb8b7286ed4a45f31b6c936a9a98c2}
+
+\end{DoxyCompactItemize}
+
+{\bf }\par
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classString_a1d1bcc50e73c2538ca16f3aec01eef87}{operator$>$} (const \hyperlink{classString}{String} \&lhs, const \hyperlink{classString}{String} \&rhs)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classString}{String} inequality\-: Greater-\/than. \end{DoxyCompactList}\item 
+\hypertarget{classString_a566b1d31a6078ef4de4362be86e562e6}{bool {\bfseries operator$>$} (const \hyperlink{classString}{String} \&lhs, char rhs)}\label{classString_a566b1d31a6078ef4de4362be86e562e6}
+
+\item 
+\hypertarget{classString_ab4a443eed7b8adb78c5aadca1354b49b}{bool {\bfseries operator$>$} (const \hyperlink{classString}{String} \&lhs, const char $\ast$rhs)}\label{classString_ab4a443eed7b8adb78c5aadca1354b49b}
+
+\item 
+\hypertarget{classString_a486badb004de822729b2ed7acaf59870}{bool {\bfseries operator$>$} (char lhs, const \hyperlink{classString}{String} \&rhs)}\label{classString_a486badb004de822729b2ed7acaf59870}
+
+\item 
+\hypertarget{classString_a0ac76ec24bc20d38967c451767fa76bd}{bool {\bfseries operator$>$} (const char $\ast$lhs, const \hyperlink{classString}{String} \&rhs)}\label{classString_a0ac76ec24bc20d38967c451767fa76bd}
+
+\end{DoxyCompactItemize}
+
+{\bf }\par
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classString_ac4e429cee0b2f43d16eca3b016f5185c}{operator!=} (const \hyperlink{classString}{String} \&lhs, const \hyperlink{classString}{String} \&rhs)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classString}{String} non-\/equality. \end{DoxyCompactList}\item 
+\hypertarget{classString_a7bc080b6ec496f3a94dbf8624902bc75}{bool {\bfseries operator!=} (const \hyperlink{classString}{String} \&lhs, char rhs)}\label{classString_a7bc080b6ec496f3a94dbf8624902bc75}
+
+\item 
+\hypertarget{classString_a1cadc42fadabb1c9aaa455d8f857a6db}{bool {\bfseries operator!=} (const \hyperlink{classString}{String} \&lhs, const char $\ast$rhs)}\label{classString_a1cadc42fadabb1c9aaa455d8f857a6db}
+
+\item 
+\hypertarget{classString_ace96b26f74fc799778c4246c841a6acf}{bool {\bfseries operator!=} (char lhs, const \hyperlink{classString}{String} \&rhs)}\label{classString_ace96b26f74fc799778c4246c841a6acf}
+
+\item 
+\hypertarget{classString_acab3e9f8bdf2c08f6cf2fc285558c1ce}{bool {\bfseries operator!=} (const char $\ast$lhs, const \hyperlink{classString}{String} \&rhs)}\label{classString_acab3e9f8bdf2c08f6cf2fc285558c1ce}
+
+\end{DoxyCompactItemize}
+
+{\bf }\par
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classString_ad94401dcf2dfb1476aa89ca9835170b5}{operator$<$} (const \hyperlink{classString}{String} \&lhs, const \hyperlink{classString}{String} \&rhs)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classString}{String} inequality\-: Less-\/than. \end{DoxyCompactList}\item 
+\hypertarget{classString_a46c921e0ffb91214fbcd9917ae55ebac}{bool {\bfseries operator$<$} (const \hyperlink{classString}{String} \&lhs, char rhs)}\label{classString_a46c921e0ffb91214fbcd9917ae55ebac}
+
+\item 
+\hypertarget{classString_ab6704f416891347d26ebbc5bc9401a3a}{bool {\bfseries operator$<$} (const \hyperlink{classString}{String} \&lhs, const char $\ast$rhs)}\label{classString_ab6704f416891347d26ebbc5bc9401a3a}
+
+\item 
+\hypertarget{classString_aee8e05b5eeae44c055b159f835bad40b}{bool {\bfseries operator$<$} (char lhs, const \hyperlink{classString}{String} \&rhs)}\label{classString_aee8e05b5eeae44c055b159f835bad40b}
+
+\item 
+\hypertarget{classString_a29ed7eb9bc181d1df7f5c55ca6246b60}{bool {\bfseries operator$<$} (const char $\ast$lhs, const \hyperlink{classString}{String} \&rhs)}\label{classString_a29ed7eb9bc181d1df7f5c55ca6246b60}
+
+\end{DoxyCompactItemize}
+
+{\bf }\par
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classString_a48545cc6c63142caa4dcce85a1b6feda}{operator$<$=} (const \hyperlink{classString}{String} \&lhs, const \hyperlink{classString}{String} \&rhs)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classString}{String} inequality\-: Less-\/than or equal. \end{DoxyCompactList}\item 
+\hypertarget{classString_aecee2dfb26d23435db896bda83fb452f}{bool {\bfseries operator$<$=} (const \hyperlink{classString}{String} \&lhs, char rhs)}\label{classString_aecee2dfb26d23435db896bda83fb452f}
+
+\item 
+\hypertarget{classString_a990a88794f4e1678fd932c84de435e26}{bool {\bfseries operator$<$=} (const \hyperlink{classString}{String} \&lhs, const char $\ast$rhs)}\label{classString_a990a88794f4e1678fd932c84de435e26}
+
+\item 
+\hypertarget{classString_ae0f56c55308c60b51d3a0d255b65eb0e}{bool {\bfseries operator$<$=} (char lhs, const \hyperlink{classString}{String} \&rhs)}\label{classString_ae0f56c55308c60b51d3a0d255b65eb0e}
+
+\item 
+\hypertarget{classString_a8849265e14282c47ef7327ce79e14d0e}{bool {\bfseries operator$<$=} (const char $\ast$lhs, const \hyperlink{classString}{String} \&rhs)}\label{classString_a8849265e14282c47ef7327ce79e14d0e}
+
+\end{DoxyCompactItemize}
+
+{\bf }\par
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classString_a8aaac987f17f693b727f6f61c82ef59d}{operator$>$=} (const \hyperlink{classString}{String} \&lhs, const \hyperlink{classString}{String} \&rhs)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classString}{String} inequality\-: Greater-\/than or equal. \end{DoxyCompactList}\item 
+\hypertarget{classString_a5613f8f396ca5992d592745e1a5bd3ad}{bool {\bfseries operator$>$=} (const \hyperlink{classString}{String} \&lhs, char rhs)}\label{classString_a5613f8f396ca5992d592745e1a5bd3ad}
+
+\item 
+\hypertarget{classString_adce2f798f94879309cef872d5c0cf70c}{bool {\bfseries operator$>$=} (const \hyperlink{classString}{String} \&lhs, const char $\ast$rhs)}\label{classString_adce2f798f94879309cef872d5c0cf70c}
+
+\item 
+\hypertarget{classString_af610fc0bd52cb2d8556382c3037dfdc0}{bool {\bfseries operator$>$=} (char lhs, const \hyperlink{classString}{String} \&rhs)}\label{classString_af610fc0bd52cb2d8556382c3037dfdc0}
+
+\item 
+\hypertarget{classString_a5415fd0bce16fb23ec98e50c0b82b42e}{bool {\bfseries operator$>$=} (const char $\ast$lhs, const \hyperlink{classString}{String} \&rhs)}\label{classString_a5415fd0bce16fb23ec98e50c0b82b42e}
+
+\end{DoxyCompactItemize}
+
+
+
+\subsection{Detailed Description}
+A custom \hyperlink{classString}{String} implementation. 
+
+A custom C++ implementation of a \hyperlink{classString}{String} object for pedagogical purposes. Is efficient for specifying the length of your \hyperlink{classString}{String} and does not depend on the use of a N\-U\-L\-L termination.
+
+\begin{DoxyAuthor}{Author}
+Bryan Goodrich 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\-2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2013-\/12-\/13 
+\end{DoxyDate}
+\begin{DoxyInvariant}{Invariant}
+\hyperlink{classString}{String} data will always point to N\-U\-L\-L or a valid address. 
+
+\hyperlink{classString}{String} length will always indicate amount of allocated space. 
+\end{DoxyInvariant}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classString_a8a7ef356e05eb9b1ea1ab518baee3095}{\index{String@{String}!String@{String}}
+\index{String@{String}!String@{String}}
+\subsubsection[{String}]{\setlength{\rightskip}{0pt plus 5cm}String\-::\-String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classString_a8a7ef356e05eb9b1ea1ab518baee3095}
+
+
+Empty \hyperlink{classString}{String} Constructor. 
+
+\begin{DoxyPostcond}{Postcondition}
+\hyperlink{classString}{String} length is set equal to 0. 
+\end{DoxyPostcond}
+\hypertarget{classString_a1fdfe981d2c5e0075c1669dd94553082}{\index{String@{String}!String@{String}}
+\index{String@{String}!String@{String}}
+\subsubsection[{String}]{\setlength{\rightskip}{0pt plus 5cm}String\-::\-String (
+\begin{DoxyParamCaption}
+\item[{char}]{c}
+\end{DoxyParamCaption}
+)}}\label{classString_a1fdfe981d2c5e0075c1669dd94553082}
+
+
+Single-\/character \hyperlink{classString}{String} Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em c} & A char literal. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+\hyperlink{classString}{String} data equals {\itshape c} and \hyperlink{classString}{String} length equals 1. 
+\end{DoxyPostcond}
+\hypertarget{classString_abd440c0a85756c6d4d24b64726933077}{\index{String@{String}!String@{String}}
+\index{String@{String}!String@{String}}
+\subsubsection[{String}]{\setlength{\rightskip}{0pt plus 5cm}String\-::\-String (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{c}
+\end{DoxyParamCaption}
+)}}\label{classString_abd440c0a85756c6d4d24b64726933077}
+
+
+char$\ast$ \hyperlink{classString}{String} Constructor 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em c} & A char$\ast$ null-\/terminated string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+\hyperlink{classString}{String} length equals
+\begin{DoxyCode}
+strlen(c)
+\end{DoxyCode}
+. 
+
+\hyperlink{classString}{String} data equals {\itshape c} allocated values, except the null-\/terminator. 
+\end{DoxyPostcond}
+\hypertarget{classString_a50ec7bf093552bdd2f467225c185490a}{\index{String@{String}!String@{String}}
+\index{String@{String}!String@{String}}
+\subsubsection[{String}]{\setlength{\rightskip}{0pt plus 5cm}String\-::\-String (
+\begin{DoxyParamCaption}
+\item[{const {\bf String} \&}]{s}
+\end{DoxyParamCaption}
+)}}\label{classString_a50ec7bf093552bdd2f467225c185490a}
+
+
+Copy \hyperlink{classString}{String} Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em s} & A \hyperlink{classString}{String} instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+This \hyperlink{classString}{String} will be identical to \hyperlink{classString}{String} {\itshape s}. 
+\end{DoxyPostcond}
+\hypertarget{classString_ac40b2a3fb58c2d8556f5e6ff73510036}{\index{String@{String}!$\sim$\-String@{$\sim$\-String}}
+\index{$\sim$\-String@{$\sim$\-String}!String@{String}}
+\subsubsection[{$\sim$\-String}]{\setlength{\rightskip}{0pt plus 5cm}String\-::$\sim$\-String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classString_ac40b2a3fb58c2d8556f5e6ff73510036}
+
+
+Default \hyperlink{classString}{String} Destructor. 
+
+\begin{DoxyPostcond}{Postcondition}
+\hyperlink{classString}{String} data is deleted. 
+\end{DoxyPostcond}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classString_aeb4f3ac2a19f4bb5de51991ed1ed047b}{\index{String@{String}!downcase@{downcase}}
+\index{downcase@{downcase}!String@{String}}
+\subsubsection[{downcase}]{\setlength{\rightskip}{0pt plus 5cm}void String\-::downcase (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{first, }
+\item[{unsigned}]{last}
+\end{DoxyParamCaption}
+)}}\label{classString_aeb4f3ac2a19f4bb5de51991ed1ed047b}
+
+
+Converts uppercase alphabetic characters to lowercase. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em first} & Starting index of \hyperlink{classString}{String} to change case. \\
+\hline
+\mbox{\tt in}  & {\em last} & Ending index of \hyperlink{classString}{String} to change case. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+{\itshape first} is less than or equal to {\itshape last} and {\itshape last} is less than or equal to \hyperlink{classString}{String} length. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+All uppercase alphabetic characters in \hyperlink{classString}{String} data greater than or equal to {\itshape first}, but less than {\itshape last} are lowercase. 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em int} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classString_a35732025053a03087572d7b4887ce272}{\index{String@{String}!index@{index}}
+\index{index@{index}!String@{String}}
+\subsubsection[{index}]{\setlength{\rightskip}{0pt plus 5cm}int String\-::index (
+\begin{DoxyParamCaption}
+\item[{char}]{c}
+\end{DoxyParamCaption}
+) const}}\label{classString_a35732025053a03087572d7b4887ce272}
+
+
+\hyperlink{classString}{String} index of {\itshape c}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em c} & A char literal. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The index of {\itshape c} in \hyperlink{classString}{String}, if exists; -\/1 otherwise. 
+\end{DoxyReturn}
+\hypertarget{classString_add33ec877ceeb9c9ba9e39e8dbd92890}{\index{String@{String}!len@{len}}
+\index{len@{len}!String@{String}}
+\subsubsection[{len}]{\setlength{\rightskip}{0pt plus 5cm}unsigned String\-::len (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classString_add33ec877ceeb9c9ba9e39e8dbd92890}
+
+
+\hyperlink{classString}{String} length. 
+
+\begin{DoxyReturn}{Returns}
+Value in \hyperlink{classString}{String} {\ttfamily length}. 
+\end{DoxyReturn}
+\hypertarget{classString_a48ffaa3062eb9258440f5cb04eb447b4}{\index{String@{String}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!String@{String}}
+\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf String} \& String\-::operator+= (
+\begin{DoxyParamCaption}
+\item[{const {\bf String} \&}]{s}
+\end{DoxyParamCaption}
+)}}\label{classString_a48ffaa3062eb9258440f5cb04eb447b4}
+
+
+Append to \hyperlink{classString}{String}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em s} & A \hyperlink{classString}{String} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A \hyperlink{classString}{String} reference to $\ast$this. 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+\hyperlink{classString}{String} will equal the concatenation of itself with {\itshape s}. 
+\end{DoxyPostcond}
+\hypertarget{classString_a81fc5f68bb5acf8d3c83b9be872002f2}{\index{String@{String}!operator=@{operator=}}
+\index{operator=@{operator=}!String@{String}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf String} \& String\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf String} \&}]{s}
+\end{DoxyParamCaption}
+)}}\label{classString_a81fc5f68bb5acf8d3c83b9be872002f2}
+
+
+Sets \hyperlink{classString}{String} value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em s} & A \hyperlink{classString}{String} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A \hyperlink{classString}{String} reference to $\ast$this. 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+\hyperlink{classString}{String} will be equivalent to {\itshape s}. 
+\end{DoxyPostcond}
+\hypertarget{classString_a3131a12468bb0c6b95bef877ddf16bf0}{\index{String@{String}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!String@{String}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}char String\-::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{j}
+\end{DoxyParamCaption}
+) const}}\label{classString_a3131a12468bb0c6b95bef877ddf16bf0}
+
+
+Access \hyperlink{classString}{String} character. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & Index value in \hyperlink{classString}{String}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+{\itshape j} is less than \hyperlink{classString}{String} length. 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+character at {\itshape j} index of \hyperlink{classString}{String} data. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em int} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classString_a09a20daa7ccb207e01d191458fbc24fb}{\index{String@{String}!togglecase@{togglecase}}
+\index{togglecase@{togglecase}!String@{String}}
+\subsubsection[{togglecase}]{\setlength{\rightskip}{0pt plus 5cm}void String\-::togglecase (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{first, }
+\item[{unsigned}]{last}
+\end{DoxyParamCaption}
+)}}\label{classString_a09a20daa7ccb207e01d191458fbc24fb}
+
+
+Toggles lowercase alphabetic characters to uppercase, and vice versa. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em first} & Starting index of \hyperlink{classString}{String} to change case. \\
+\hline
+\mbox{\tt in}  & {\em last} & Ending index of \hyperlink{classString}{String} to change case. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+{\itshape first} is less than or equal to {\itshape last} and {\itshape last} is less than or equal to \hyperlink{classString}{String} length. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+All lowercase alphabetic characters in \hyperlink{classString}{String} data greater than or equal to {\itshape first}, but less than {\itshape last} are uppercase, and all uppercase alphabetic characters in \hyperlink{classString}{String} data are lowercase. 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em int} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classString_a660ef1c6f164578528c6fe523bb24ddd}{\index{String@{String}!upcase@{upcase}}
+\index{upcase@{upcase}!String@{String}}
+\subsubsection[{upcase}]{\setlength{\rightskip}{0pt plus 5cm}void String\-::upcase (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{first, }
+\item[{unsigned}]{last}
+\end{DoxyParamCaption}
+)}}\label{classString_a660ef1c6f164578528c6fe523bb24ddd}
+
+
+Converts lowercase alphabetic characters to uppercase. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em first} & Starting index of \hyperlink{classString}{String} to change case. \\
+\hline
+\mbox{\tt in}  & {\em last} & Ending index of \hyperlink{classString}{String} to change case. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+{\itshape first} is less than or equal to {\itshape last} and {\itshape last} is less than or equal to \hyperlink{classString}{String} length. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+All lowercase alphabetic characters in \hyperlink{classString}{String} data greater than or equal to {\itshape first}, but less than {\itshape last} are uppercase. 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em int} & \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classString_ac4e429cee0b2f43d16eca3b016f5185c}{\index{String@{String}!operator!=@{operator!=}}
+\index{operator!=@{operator!=}!String@{String}}
+\subsubsection[{operator!=}]{\setlength{\rightskip}{0pt plus 5cm}bool operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf String} \&}]{lhs, }
+\item[{const {\bf String} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classString_ac4e429cee0b2f43d16eca3b016f5185c}
+
+
+\hyperlink{classString}{String} non-\/equality. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em lhs} & The left-\/hand operand \hyperlink{classString}{String} or \hyperlink{classString}{String} convertable. \\
+\hline
+\mbox{\tt in}  & {\em rhs} & The right-\/hand operand \hyperlink{classString}{String} or \hyperlink{classString}{String} convertable. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True, if {\itshape lhs} is not equal to {\itshape rhs}. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classString_a57204d6cb68b449d9db9eae4883571c1}{String\-::operator==} 
+\end{DoxySeeAlso}
+\hypertarget{classString_a346acdf3143412eaab63e8f3664cd575}{\index{String@{String}!operator+@{operator+}}
+\index{operator+@{operator+}!String@{String}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf String} operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf String} \&}]{lhs, }
+\item[{const {\bf String} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classString_a346acdf3143412eaab63e8f3664cd575}
+
+
+\hyperlink{classString}{String} concatenation (addition). 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em lhs} & The left-\/hand operand \hyperlink{classString}{String} or \hyperlink{classString}{String} convertable. \\
+\hline
+\mbox{\tt in}  & {\em rhs} & The right-\/hand operand \hyperlink{classString}{String} or \hyperlink{classString}{String} convertable. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Copy of a \hyperlink{classString}{String} object. 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+The \hyperlink{classString}{String} will be the concatenation of {\itshape lhs} and {\itshape rhs}. 
+\end{DoxyPostcond}
+\hypertarget{classString_ad94401dcf2dfb1476aa89ca9835170b5}{\index{String@{String}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!String@{String}}
+\subsubsection[{operator$<$}]{\setlength{\rightskip}{0pt plus 5cm}bool operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf String} \&}]{lhs, }
+\item[{const {\bf String} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classString_ad94401dcf2dfb1476aa89ca9835170b5}
+
+
+\hyperlink{classString}{String} inequality\-: Less-\/than. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em lhs} & The left-\/hand operand \hyperlink{classString}{String} or \hyperlink{classString}{String} convertable. \\
+\hline
+\mbox{\tt in}  & {\em rhs} & The right-\/hand operand \hyperlink{classString}{String} or \hyperlink{classString}{String} convertable. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True, if {\itshape lhs} is neither equal to, nor greater-\/than {\itshape rhs}. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classString_a57204d6cb68b449d9db9eae4883571c1}{String\-::operator==},\hyperlink{classString_a1d1bcc50e73c2538ca16f3aec01eef87}{String\-::operator$>$} 
+\end{DoxySeeAlso}
+\hypertarget{classString_aca402c6a0b7cce1f431a4f117a7b4e36}{\index{String@{String}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!String@{String}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std\-::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{so, }
+\item[{const {\bf String} \&}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classString_aca402c6a0b7cce1f431a4f117a7b4e36}
+
+
+Stream operators. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em so} & A stream object. \\
+\hline
+{\em s} & A \hyperlink{classString}{String} object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Stream object containing \hyperlink{classString}{String} content. 
+\end{DoxyReturn}
+\hypertarget{classString_a48545cc6c63142caa4dcce85a1b6feda}{\index{String@{String}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!String@{String}}
+\subsubsection[{operator$<$=}]{\setlength{\rightskip}{0pt plus 5cm}bool operator$<$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf String} \&}]{lhs, }
+\item[{const {\bf String} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classString_a48545cc6c63142caa4dcce85a1b6feda}
+
+
+\hyperlink{classString}{String} inequality\-: Less-\/than or equal. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em lhs} & The left-\/hand operand \hyperlink{classString}{String} or \hyperlink{classString}{String} convertable. \\
+\hline
+\mbox{\tt in}  & {\em rhs} & The right-\/hand operand \hyperlink{classString}{String} or \hyperlink{classString}{String} convertable. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True, if {\itshape lhs} is not greater-\/than {\itshape rhs}. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classString_a1d1bcc50e73c2538ca16f3aec01eef87}{String\-::operator$>$} 
+\end{DoxySeeAlso}
+\hypertarget{classString_a57204d6cb68b449d9db9eae4883571c1}{\index{String@{String}!operator==@{operator==}}
+\index{operator==@{operator==}!String@{String}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf String} \&}]{lhs, }
+\item[{const {\bf String} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classString_a57204d6cb68b449d9db9eae4883571c1}
+
+
+\hyperlink{classString}{String} equality. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em lhs} & The left-\/hand operand \hyperlink{classString}{String} or \hyperlink{classString}{String} convertable. \\
+\hline
+\mbox{\tt in}  & {\em rhs} & The right-\/hand operand \hyperlink{classString}{String} or \hyperlink{classString}{String} convertable. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True, if {\itshape lhs} and {\itshape rhs} have the same length, and each character in their \hyperlink{classString}{String} data are identical in both value and index. 
+\end{DoxyReturn}
+\hypertarget{classString_a1d1bcc50e73c2538ca16f3aec01eef87}{\index{String@{String}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!String@{String}}
+\subsubsection[{operator$>$}]{\setlength{\rightskip}{0pt plus 5cm}bool operator$>$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf String} \&}]{lhs, }
+\item[{const {\bf String} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classString_a1d1bcc50e73c2538ca16f3aec01eef87}
+
+
+\hyperlink{classString}{String} inequality\-: Greater-\/than. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em lhs} & The left-\/hand operand \hyperlink{classString}{String} or \hyperlink{classString}{String} convertable. \\
+\hline
+\mbox{\tt in}  & {\em rhs} & The right-\/hand operand \hyperlink{classString}{String} or \hyperlink{classString}{String} convertable. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True, if {\itshape lhs} is in dictionary order (Capitals-\/first) to {\itshape rhs} when comparing alphabetical characters or {\itshape lhs} is greater in A\-S\-C\-I\-I value to {\itshape rhs}, in corresponding \hyperlink{classString}{String} data indices. 
+\end{DoxyReturn}
+\hypertarget{classString_a8aaac987f17f693b727f6f61c82ef59d}{\index{String@{String}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!String@{String}}
+\subsubsection[{operator$>$=}]{\setlength{\rightskip}{0pt plus 5cm}bool operator$>$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf String} \&}]{lhs, }
+\item[{const {\bf String} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classString_a8aaac987f17f693b727f6f61c82ef59d}
+
+
+\hyperlink{classString}{String} inequality\-: Greater-\/than or equal. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em lhs} & The left-\/hand operand \hyperlink{classString}{String} or \hyperlink{classString}{String} convertable. \\
+\hline
+\mbox{\tt in}  & {\em rhs} & The right-\/hand operand \hyperlink{classString}{String} or \hyperlink{classString}{String} convertable. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True, if {\itshape lhs} is greater-\/than or equal to {\itshape rhs}. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classString_a1d1bcc50e73c2538ca16f3aec01eef87}{String\-::operator$>$},\hyperlink{classString_a57204d6cb68b449d9db9eae4883571c1}{String\-::operator==} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+String.\-h\item 
+String.\-cpp\end{DoxyCompactItemize}

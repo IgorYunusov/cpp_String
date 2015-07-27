@@ -1,0 +1,43 @@
+\subsection*{Overview }
+
+A custom string class that implements strings in the C/\-C++ environment without N\-U\-L\-L termination. It is a proper object that contains the string data and its length. Using these, both read and write methods are provided, as well as other expected string commands, such as upcasing, downcasing, or character indexing.
+
+An improvement for this exercise would be to incorporate more string methods, such as those exemplified in the Python string class\-: \href{https://docs.python.org/3/library/string.html}{\tt https\-://docs.\-python.\-org/3/library/string.\-html}
+
+This project does not attempt to provide an improvement over C strings or the C++ {\ttfamily string} library. This is purely for pedagogical purposes.
+
+This is an update to my C\-I\-S\-P 430 Data Structures class assignment from American River College taught by the great David Fox.
+
+\section*{\hyperlink{classString}{String} A\-P\-I }
+
+\subsection*{Constructors }
+
+``` \hyperlink{classString}{String} ( ) // Empty \hyperlink{classString}{String} default constructor \hyperlink{classString}{String} (char) // Character \hyperlink{classString}{String} constructor \hyperlink{classString}{String} (const char$\ast$) // Character array \hyperlink{classString}{String} constructor \hyperlink{classString}{String} (const \hyperlink{classString}{String}\& s) // Copy constructor ```
+
+\subsection*{Informational Methods }
+
+``` unsigned len ( ) const // \hyperlink{classString}{String} length int index (char) const // Find character index ```
+
+\subsection*{Case Methods }
+
+``` void upcase (unsigned first, unsigned last) // Uppercase \hyperlink{classString}{String} within range void downcase (unsigned first, unsigned last) // Lowercase \hyperlink{classString}{String} within range void togglecase (unsigned first, unsigned last) // Toggle case within range ```
+
+\subsection*{Stream Operators }
+
+``` friend std\-::ostream\& operator$<$$<$ (std\-::ostream\&, const \hyperlink{classString}{String}\&) // cout $<$$<$ \hyperlink{classString}{String} friend std\-::istream\& operator$>$$>$ (std\-::istream\&, \hyperlink{classString}{String}\&) // cin $>$$>$ \hyperlink{classString}{String} ```
+
+\subsection*{Accessor Operators }
+
+``` char operator\mbox{[}\mbox{]} (unsigned) const // Reference access char\& operator\mbox{[}\mbox{]} (unsigned) // Copy access ```
+
+\subsection*{Assignment Operators }
+
+``` \hyperlink{classString}{String}\& operator= (const \hyperlink{classString}{String}\&) // Assign new \hyperlink{classString}{String} \hyperlink{classString}{String}\& operator+= (const \hyperlink{classString}{String}\&) // Assign concatenated \hyperlink{classString}{String} ```
+
+\subsection*{\hyperlink{classString}{String} Concatenation }
+
+``` friend \hyperlink{classString}{String} operator+ (const \hyperlink{classString}{String}\&, const \hyperlink{classString}{String}\&) // Concat two Strings friend \hyperlink{classString}{String} operator+ (const \hyperlink{classString}{String}\&, char) // Concat a \hyperlink{classString}{String} and character friend \hyperlink{classString}{String} operator+ (const \hyperlink{classString}{String}\&, const char$\ast$) // Concat a \hyperlink{classString}{String} and C-\/string friend \hyperlink{classString}{String} operator+ (char, const \hyperlink{classString}{String}\&) // Concat a character and \hyperlink{classString}{String} friend \hyperlink{classString}{String} operator+ (const char$\ast$, const \hyperlink{classString}{String}\&) // Concat a C-\/string and \hyperlink{classString}{String} ```
+
+\subsection*{Logical Operators }
+
+All argument permutations in concatenation are repeated here, also. ``` friend bool operator== (const \hyperlink{classString}{String}\&, const \hyperlink{classString}{String}\&) // Equality friend bool operator!= (const \hyperlink{classString}{String}\&, const \hyperlink{classString}{String}\&) // Non-\/\-Equality friend bool operator$<$ (const \hyperlink{classString}{String}\&, const \hyperlink{classString}{String}\&) // Less-\/than Inequality friend bool operator$>$ (const \hyperlink{classString}{String}\&, const \hyperlink{classString}{String}\&) // Greater-\/than Inequality friend bool operator$<$= (const \hyperlink{classString}{String}\&, const \hyperlink{classString}{String}\&) // Less-\/than or Equailty friend bool operator$>$= (const \hyperlink{classString}{String}\&, const \hyperlink{classString}{String}\&) // Greater-\/than or Equality ``` 
