@@ -46,8 +46,8 @@ unsigned   len ( ) const     // String length
 Case Methods
 ------------
 ```
-void     upcase (unsigned first, unsigned last)  // Uppercase string within range
-void   downcase (unsigned first, unsigned last)  // Lowercase string within range
+void     upcase (unsigned first, unsigned last)  // Uppercase String within range
+void   downcase (unsigned first, unsigned last)  // Lowercase String within range
 void togglecase (unsigned first, unsigned last)  // Toggle case within range
 ```
 
