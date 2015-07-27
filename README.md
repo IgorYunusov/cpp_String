@@ -7,11 +7,11 @@ A custom string class that implements strings in the C/C++
 environment without NULL termination. It is a proper object
 that contains the string data and its length. Using these,
 both read and write methods are provided, as well as 
-standard ostream output, and other expected string commands,
-such as upcasing, downcasing, or character indexing. 
+other expected string commands, such as upcasing, downcasing,
+or character indexing. 
 
 An improvement for this exercise would be to incorporate more
-string methods, such as those exemplified on the Python string
+string methods, such as those exemplified in the Python string
 class: https://docs.python.org/3/library/string.html
 
 This project does not attempt to provide an improvement
@@ -48,49 +48,49 @@ Case Methods
 ```
 void     upcase (unsigned first, unsigned last)  // Uppercase string within range
 void   downcase (unsigned first, unsigned last)  // Lowercase string within range
-void togglecase( unsigned first, unsigned last)  // Toggle case within range
+void togglecase (unsigned first, unsigned last)  // Toggle case within range
 ```
 
 Stream Operators
 ----------------
 ```
-friend std::ostream& operator<< (std::ostream&, const String&)
-friend std::istream& operator>> (std::istream&, String&)
+friend std::ostream& operator<< (std::ostream&, const String&)  // cout << String 
+friend std::istream& operator>> (std::istream&, String&)        // cin >> String
 ```
 
 Accessor Operators
 ------------------
 ```
- char operator[] (unsigned) const
-char& operator[] (unsigned)
+ char operator[] (unsigned) const  // Reference access
+char& operator[] (unsigned)        // Copy access
 ```
 
 Assignment Operators
 --------------------
 ```
-String&  operator= (const String&)
-String& operator+= (const String&)
+String&  operator= (const String&)  // Assign new String
+String& operator+= (const String&)  // Assign concatenated String
 ```
 
 String Concatenation
 --------------------
 ```
-friend String operator+ (const String&, const String&)
-friend String operator+ (const String&, char)
-friend String operator+ (const String&, const char*)
-friend String operator+ (char, const String&)
-friend String operator+ (const char*, const String&)
+friend String operator+ (const String&, const String&)  // Concat two Strings
+friend String operator+ (const String&, char)           // Concat a String and character
+friend String operator+ (const String&, const char*)    // Concat a String and C-string
+friend String operator+ (char, const String&)           // Concat a character and String
+friend String operator+ (const char*, const String&)    // Concat a C-string and String
 ```
 
 Logical Operators
 -----------------
 All argument permutations in concatenation are repeated here, also.
 ```
-friend bool operator== (const String&, const String&)
-friend bool operator!= (const String&, const String&)
-friend bool  operator< (const String&, const String&)
-friend bool  operator> (const String&, const String&)
-friend bool operator<= (const String&, const String&)
-friend bool operator>= (const String&, const String&)
+friend bool operator== (const String&, const String&)  // Equality
+friend bool operator!= (const String&, const String&)  // Non-Equality
+friend bool  operator< (const String&, const String&)  // Less-than Inequality
+friend bool  operator> (const String&, const String&)  // Greater-than Inequality
+friend bool operator<= (const String&, const String&)  // Less-than or Equailty
+friend bool operator>= (const String&, const String&)  // Greater-than or Equality
 ```
 
